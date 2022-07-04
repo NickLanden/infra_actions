@@ -8,6 +8,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    '51.250.23.231'
 ]
 
 INSTALLED_APPS = [
