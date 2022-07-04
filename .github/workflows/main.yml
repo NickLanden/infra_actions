@@ -60,6 +60,7 @@ jobs:
         host: ${{ secrets.HOST2 }}
         username: ${{ secrets.USER2 }}
         key: ${{ secrets.SSH_KEY2 }}
+        passphrase: ${{ secrets.PASSPHRASE2 }}
         script: |
           # Выполняет pull  образа с DockerHub
           sudo docker pull n1cklanden/infra_action
