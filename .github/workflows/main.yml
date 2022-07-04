@@ -57,12 +57,12 @@ jobs:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
+          host: ${{ secrets.HOST2 }}
           username: ${{ secrets.USER }}
-          key: ${{ secrets.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY2 }}
           script: |
             # Выполняет pull  образа с DockerHub
             sudo docker pull n1cklanden/infra_action:latest
             # остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 n1cklanden/infra_actions
+            sudo docker run --rm -d -p 5000:5000 n1cklanden/infra_action
